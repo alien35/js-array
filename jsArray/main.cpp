@@ -7,9 +7,28 @@
 //
 
 #include <iostream>
+#include "jsArray.hpp"
+#include <stdexcept>
+#include <vector>
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    
+    js::Array<int> myArray;
+    
+    myArray.push(7);
+
+    myArray.push(34);
+
+    myArray.push(23);
+    
+    std::cout << myArray.pop() << std::endl;
+
+    myArray.unshift(2);
+    
+    myArray.print();
+    
+    std::cout << myArray.length() << std::endl;
+   
     return 0;
 }
+    
